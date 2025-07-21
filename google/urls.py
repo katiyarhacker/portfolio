@@ -20,4 +20,8 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('port.urls')),
+    path(
+        'google6cb7990a59be90b8.html',
+        TemplateView.as_view(template_name='google6cb7990a59be90b8.html', content_type='text/html')
+    ),
 ]
