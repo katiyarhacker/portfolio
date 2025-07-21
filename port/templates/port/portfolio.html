@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style type="text/css">
+
+    .tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+  gap: 15px;
+}
+
+.tools-list li {
+  background: #eee;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+      
+      .about-content {
+  max-width: 800px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.about-content strong {
+  color: #ff5733;
+}
+
+
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background: #222;
+  color: white;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
+  height: 90vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-text h2 {
+  font-size: 40px;
+}
+
+.hero-text p {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #ff5733;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.project-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background: #fff;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+.skills-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.skills-list li {
+  background: #eee;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+}
+
+  </style>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1 class="logo">Anupam</h1>
+      <nav>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero">
+    <div class="hero-text">
+      <h2>Hello, I'm Anupam</h2>
+      <p>Aspiring Web Developer & Programmer</p>
+      <a href="#contact" class="btn">Hire Me</a>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+  <h2>About Me</h2>
+  <div class="about-content">
+    <p>Hello! I’m <strong>Anupam Katiyar</strong>, a BCA student from CSJM University, Kanpur. I have a deep interest in web development and programming. I enjoy building user-friendly websites and applications using HTML, CSS, JavaScript, and Python.</p>
+
+    <p>With a solid foundation in computer science and hands-on experience in creating projects like an eCommerce website, I aim to continuously grow my technical skills and contribute to real-world solutions. I am also an enthusiastic learner who believes in teamwork and adaptability.</p>
+
+    <p>Beyond coding, I love playing sports, managing teams, and solving real-world problems with creativity.</p>
+      
+      <p><strong>Software Tools I Use:</strong></p>
+    <ul class="tools-list">
+      <li>SQLite</li>
+      <li>MS Word</li>
+      <li>MS Excel</li>
+      <li>Sublime text</li>
+      
+    </ul>
+
+
+  </div>
+</section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>eCommerce Website</h3>
+        <p>Built with HTML, CSS, JS</p>
+      </div>
+      <div class="project-card">
+        <h3>Python App</h3>
+        <p>Simple CLI-based tool</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Python</li>
+      <li>C++</li>
+      <li>java</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: anupamkatiyar934@gmail.com</p>
+    <p>Phone: 9555529109</p>
+    <p><a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Anupam Katiyar</p>
+  </footer>
+
+</body>
+</html>
