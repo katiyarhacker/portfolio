@@ -1,11 +1,11 @@
 services:
   - type: web
     name: portfolio-django
-    runtime: python
+    env: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn google.wsgi:application
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: google.settings
       - key: PYTHON_VERSION
-        value: 3.11
+        value: 3.10
