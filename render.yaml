@@ -9,3 +9,6 @@ services:
         value: google.settings
       - key: PYTHON_VERSION
         value: 3.11.6
+buildCommand: |
+  pip install -r requirements.txt
+  python manage.py collectstatic --noinput
