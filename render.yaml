@@ -7,6 +7,5 @@ services:
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: google.settings
-
-build:
-  pythonVersion: 3.11.6
+      - key: PYTHON_VERSION
+        value: 3.11.6
