@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-# Portfolio page
 def portfolio(request):
     return render(request, 'port/portfolio.html')
 

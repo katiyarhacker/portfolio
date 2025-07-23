@@ -19,7 +19,7 @@ from django.urls import path,include
 from django.views.generic import TemplateView 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('port.urls')),
+    path('port/', include('port.urls')),
      path(
         'google6cb7990a59be90b8.html',
         TemplateView.as_view(
