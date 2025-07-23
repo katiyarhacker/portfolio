@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ef_rql73^m3+llrsix@g%*ll+#9fmf#zq80&%fw+4bq-b*r8t@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['portfolio-2-uwni.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'portfolio-2-uwni.onrender.com']
 # Application definition
 
 INSTALLED_APPS = [
@@ -53,7 +53,7 @@ ROOT_URLCONF = 'google.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [BASE_DIR / 'templates'],  
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

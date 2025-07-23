@@ -1,6 +1,10 @@
-from django.urls import path
-from . import views  
-urlpatterns = [
-    path('', views.portfolio, name='portfolio'),
-     path('google6cb7990a59be90b8.html', views.google6cb7990a59be90b8),
-]    
+from django.shortcuts import render
+from django.http import HttpResponse
+
+# Show portfolio HTML page
+def portfolio(request):
+    return render(request, 'port/portfolio.html')
+
+# Google site verification
+def google6cb7990a59be90b8(request):
+    return HttpResponse("google-site-verification: google6cb7990a59be90b8.html", content_type="text/html")
