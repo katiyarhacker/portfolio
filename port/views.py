@@ -4,6 +4,8 @@ import requests
 
 def portfolio(request):
     return render(request, 'port/portfolio1.html')
+def todo_List(request):
+    return render(request, 'port/todo_List.html')    
 
 # Google site verification
 def google6cb7990a59be90b8(request):

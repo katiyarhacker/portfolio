@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<title>To-do app</title>
+	<style>
+		.todo-box {
+			min-height: 250px;  
+			position: absolute;
+			background-color: white;
+			border: 2px solid black;
+			width: 100%;
+			top: 100px;
+			border-radius: 20px;
+			padding: 20px;
+			height: auto;
+		}
+		.input-container {
+			position: relative;
+			width: 80%;
+			margin: auto;
+		}
+		.input-container input {
+			width: 100%;
+			border-radius: 50px;
+			outline: none;
+			padding: 10px 90px 10px 15px; /* right side space for button */
+			border: 2px solid #333;
+			font-size: 16px;
+		}
+		.input-container button {
+			position: absolute;
+			right: 5px;
+			top: 50%;
+			transform: translateY(-50%);
+			padding: 8px 20px;
+			border: none;
+			border-radius: 50px;
+			background-color: #333;
+			color: white;
+			cursor: pointer;
+		}
+		.input-container button:hover {
+			background-color: #555;
+		}
+		#taskList {
+			margin-top: 20px;
+			list-style: none;
+			padding-left: 0;
+		}
+		#taskList li {
+			background: #f1f1f1;
+			margin: 5px 0;
+			padding: 8px 15px;
+			border-radius: 20px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.remove-btn {
+			background: red;
+			color: white;
+			border: none;
+			padding: 5px 10px;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body style="background-color: linear-gradient(135deg, #e98ce9, #e4ca81);">
+	<div class="row">
+		<div class="col-lg-4" style="height:700px"></div>
+		<div class="col-lg-4" style="height:700px;position: relative;">
+			<div class="todo-box">
+				<h2>To-Do List</h2>
+				<form id="todoForm">
+					<div class="input-container">
+						<input type="text" id="taskInput" placeholder="Add your task">
+						<button type="submit">Add</button>
+					</div>
+				</form>
+				<ul id="taskList"></ul>
+			</div>
+		</div>
+		<div class="col-lg-4" style="height:700px;"></div>
+	</div>
+
+	<script>
+		document.getElementById("todoForm").addEventListener("submit", function(e){
+			e.preventDefault();
+			let taskInput = document.getElementById("taskInput");
+			let taskValue = taskInput.value.trim();
+
+			if(taskValue !== ""){
+				let li = document.createElement("li");
+				li.innerHTML = taskValue + " <button class='remove-btn'>X</button>";
+
+				li.querySelector(".remove-btn").addEventListener("click", function(){
+					li.remove();
+				});
+
+				document.getElementById("taskList").appendChild(li);
+				taskInput.value = "";
+			}
+		});
+	</script>
+</body>
+</html>

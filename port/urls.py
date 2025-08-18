@@ -6,5 +6,6 @@ from django.urls import path
 
 urlpatterns = [
     path('portfolio/', views.portfolio, name='portfolio'),
-    path('weatherapp/', views.weatherapp, name='weatherapp'),  # Example
+    path('weatherapp/', views.weatherapp, name='weatherapp'),
+    path('todo_List/', views.todo_List, name='todo_List'),  # Example
 ]
