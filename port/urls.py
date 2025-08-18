@@ -5,5 +5,6 @@ from django.urls import path
  # or from port import views
 
 urlpatterns = [
-    path('portfolio/', views.portfolio, name='portfolio'),  # Example
+    path('portfolio/', views.portfolio, name='portfolio'),
+    path('weatherapp/', views.weatherapp, name='weatherapp'),  # Example
 ]
